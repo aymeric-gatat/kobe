@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Unives';
+    src: url(fonts/Univers-LT-Std-85-Extra-Black-Oblique_46352.ttf);
+}
+
+*{
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Unives';
+    color: white;
+}
+
+body{
+    background-color: rgb(20,20,20);
+}
+/*background*/
+
+.background{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+    filter: saturate(0%) blur(2px);
+    opacity: 10%;
+    z-index: -10;
+}
+
+/*============== HEADER ==============*/
+
+header{
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 80px;
+    margin: 5px 20px;
+}
+
+/*LOGO*/
+.logo img{
+    width: auto;
+    height: 74px;
+}
+
+/*NAV*/
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+header nav li{
+    margin: 0 20px;
+}
+
+header nav a{
+    position: relative;
+    color: #ffffffc7;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    transition: .3s ease;
+}
+
+/*hover*/
+
+header nav a:hover{
+    color: #7A7A7A;
+}
+
+header nav a::after{
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    border-radius: 20px;
+    transition: .4s ease;
+}
+
+header nav a:hover::after{
+    left: 0;
+    width: 100%;
+    background: #7A7A7A;
+}
+
+/*====================== MAIN ==================*/
+
+/*bands*/
+
+.bands{
+    margin: 0 20px;
+}
+
+.purple, .yellow{
+    position: fixed;
+    top: -50px;
+    content: '';
+    width: 40px;
+    height: 120vh;
+    transform: rotate(-20deg);
+    z-index: -1;
+}
+
+.purple{
+    background-color: #552583;
+    box-shadow: -5px 0px 50px 10px #562583dc;
+    right: 29%;
+}
+
+.yellow{
+    background-color: #FDB927;
+    box-shadow: 5px 0px 50px 10px #FDB9277c;
+    right: 25%;
+}

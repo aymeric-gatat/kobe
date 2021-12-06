@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'Unives';
+    src: url(fonts/Univers-LT-Std-85-Extra-Black-Oblique_46352.ttf);
+}
+
+* {
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Unives';
+    color: white;
+}
+
+body {
+    position: fixed;
+    background-color: rgb(20, 20, 20);
+}
+
+/*background*/
+
+.background {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+    filter: saturate(0%) blur(2px);
+    opacity: 10%;
+    z-index: -10;
+}
+
+/*============== HEADER ==============*/
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 60px;
+    margin: 10px 20px;
+    z-index: 20;
+}
+
+/*LOGO*/
+.logo img {
+    width: auto;
+    height: 74px;
+}
+
+/*NAV*/
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+header nav li {
+    margin: 0 20px;
+}
+
+header nav a {
+    position: relative;
+    color: #ffffffc7;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    transition: .3s ease;
+}
+
+/*hover*/
+
+header nav a:hover {
+    color: #7A7A7A;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    border-radius: 20px;
+    transition: .4s ease;
+}
+
+header nav a:hover::after {
+    left: 0;
+    width: 100%;
+    background: #7A7A7A;
+}
+
+/*====================== MAIN ==================*/
+
+/*bands*/
+
+.bands {
+    margin: 0 20px;
+}
+
+.purple,
+.yellow {
+    position: fixed;
+    top: -50px;
+    content: '';
+    width: 40px;
+    height: 120vh;
+    transform: rotate(20deg);
+    z-index: -1;
+}
+
+.purple {
+    background-color: #552583;
+    box-shadow: -5px 0px 50px 10px #562583dc;
+    left: 25%;
+}
+
+.yellow {
+    background-color: #FDB927;
+    box-shadow: 5px 0px 50px 10px #FDB9277c;
+    left: 29%;
+}
+
+/*==================== Home =================*/
+
+section {
+    position: relative;
+    width: 98vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+section img {
+    position: absolute;
+}
+
+.kobe1 {
+    bottom: 0;
+    right: -23%;
+    width: auto;
+    height: 94vh;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    z-index: -5;
+}
+
+.kobe2 {
+    bottom: 0;
+    left: 15%;
+    width: auto;
+    height: 80vh;
+}
+
+.kobe3 {
+    bottom: 0;
+    left: -5%;
+    width: auto;
+    height: 90vh;
+    filter: grayscale(100%);
+    opacity: 70%;
+    z-index: -5;
+}
+
+/*Text*/
+
+
+.titre h1,
+.titre h2,
+.titre h3 {
+    position: absolute;
+    margin: 0;
+}
+
+.titre h1 {
+    color: #552583;
+    font-size: 11em;
+    top: 3%;
+    right: 43%;
+}
+
+.titre h2 {
+    color: #FDB927;
+    font-size: 5em;
+    top: 13%;
+    right: 26%;
+}
+
+.titre h3 {
+    color: #FDB927;
+    font-size: 4em;
+    top: 25%;
+    left: 59%;
+}
+
+.num {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-flow: column nowrap;
+    top: 40%;
+    right: 45%;
+    opacity: .3;
+}
+
+.num h2 {
+    font-size: 4rem;
+    margin: 5px;
+}
+
+article {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    top: 40%;
+    left: 56%;
+    opacity: .3;
+}
+
+.words p {
+    font-size: 1.5rem;
+    margin: 15px;
+}
